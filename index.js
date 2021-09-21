@@ -1,10 +1,12 @@
 var readlineSync = require('readline-sync');
 const chalk = require('chalk');
 
+console.log(chalk.bold.greenBright("Heyy lets have a quiz on movie 3-idiots❤️ "));
+
 var userName = readlineSync.question(chalk.cyanBright('May I have your name? '));
 console.log("");
 
-console.log('Hi ' + chalk.yellowBright(userName.toUpperCase()) + chalk.greenBright.underline.bold('! Lets start a quiz on movie 3-idiots.'));
+console.log('Hi ' + chalk.yellowBright(userName.toUpperCase()) + chalk.greenBright.underline.bold('! Lets get started.'));
 
 console.log("");
 score=0;
@@ -17,30 +19,30 @@ if(userAns=== answer){
   score++;
   
 }else{
-  console.log(chalk.redBright("oops! wrong answer!"));
+  console.log(chalk.magentaBright("\noops! wrong answer!\n"));
 }
 console.log(chalk.greenBright("your score is : "), score);
-console.log("--------");
+console.log("\n--------\n");
 
 }
 
 var questions=[{
-  question:'When was the movie released?',
-  answer:'2009'
+  question:'When was the movie released?\na. 2009\nb. 2010\nc. 2011\n',
+  answer:'a'
 },{
-  question : 'Which character was famous as "silencer"?', 
-  answer:'Chatur'
+  question : 'Which character was famous as "silencer"?\na. Raju\nb. Millimetre\nc. Chatur\n',
+  answer:'c'
 },{
-  question: 'What was the name of principal in movie?',
-  answer:'Virus'
+  question: 'What was the name nickname of principal in movie?\na. Inverter\nb. Lobo\nc. Virus\n',
+  answer:'c'
 },{
-  question:'Who was the protagonist of the movie ?',
-  answer:'Aamir khan'
+  question:'Who was the protagonist of the movie ?\na. Sharmaan Joshi\nb. Aamir khan\nc. R.Madhavan\n',
+  answer:'b'
 },{
-  question: 'What was the title song of movie?',
-  answer:'All is well'
-}
-]
+  question: 'What was the title song of movie?\na. All is well\nb. Behti hawa sa tha woh\nc. Jane nhi denge tujhe\n',
+  answer:'a'
+}];
+
 for (var i =0; i<questions.length; i++){
   var currentQue= questions[i];
   play(currentQue.question, currentQue.answer);
