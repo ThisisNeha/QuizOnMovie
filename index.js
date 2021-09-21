@@ -3,10 +3,10 @@ const chalk = require('chalk');
 
 console.log(chalk.bold.greenBright("Heyy lets have a quiz on movie 3-idiots❤️ "));
 
-var userName = readlineSync.question(chalk.cyanBright('May I have your name? '));
+var userName = readlineSync.question(chalk.cyanBright('\nMay I have your name?\n '));
 console.log("");
 
-console.log('Hi ' + chalk.yellowBright(userName.toUpperCase()) + chalk.greenBright.underline.bold('! Lets get started.'));
+console.log('Hi ' + chalk.yellowBright(userName.toUpperCase()) + chalk.greenBright.underline.bold('! Lets get started. You need to choose one option from a, b, c.'));
 
 console.log("");
 score=0;
